@@ -1,0 +1,159 @@
+\hypertarget{naive__conway_8h}{
+\section{include/naive\_\-conway.h File Reference}
+\label{naive__conway_8h}\index{include/naive\_\-conway.h@{include/naive\_\-conway.h}}
+}
+Fonctions about the simulation of the conways rules applied on the universe structure.  
+
+
+{\tt \#include $<$stdio.h$>$}\par
+{\tt \#include $<$stdlib.h$>$}\par
+{\tt \#include $<$stdbool.h$>$}\par
+{\tt \#include \char`\"{}naive\_\-universe.h\char`\"{}}\par
+{\tt \#include \char`\"{}../include/naive\_\-ppm\_\-writer.h\char`\"{}}\par
+
+
+Include dependency graph for naive\_\-conway.h:\subsection*{Functions}
+\begin{CompactItemize}
+\item 
+void \hyperlink{naive__conway_8h_8c5808ad22ca29945c65e1989793831e}{naive\_\-step} (\hyperlink{structUniverse}{Uni} $\ast$p\_\-universe)
+\begin{CompactList}\small\item\em Apply the Conway's rules once on a given universe \mbox{[}outside-dead implementation\mbox{]}. \item\end{CompactList}\item 
+void \hyperlink{naive__conway_8h_cb5e111b115607f83e9af88f558921f2}{naive\_\-simulation} (\hyperlink{structUniverse}{Uni} $\ast$p\_\-universe, bool print\_\-term, bool print\_\-ppm)
+\begin{CompactList}\small\item\em Apply the Conway's rules the number of steps of the universe on a given universe \mbox{[}outside-dead implementation\mbox{]}. \item\end{CompactList}\item 
+void \hyperlink{naive__conway_8h_471ecb109ad5f3460be53c2ae2da9000}{naive\_\-step\_\-torus} (\hyperlink{structUniverse}{Uni} $\ast$p\_\-universe)
+\begin{CompactList}\small\item\em Apply the Conway's rules once on a given universe \mbox{[}torus implementation\mbox{]}. \item\end{CompactList}\item 
+void \hyperlink{naive__conway_8h_8807c3fa28f43d927ac57da8e2b4b4ed}{naive\_\-simulation\_\-torus} (\hyperlink{structUniverse}{Uni} $\ast$p\_\-universe, bool print\_\-term, bool print\_\-ppm)
+\begin{CompactList}\small\item\em Apply the Conway's rules the number of steps of the universe on a given universe \mbox{[}torus implementation\mbox{]}. \item\end{CompactList}\item 
+bool \hyperlink{naive__conway_8h_944e6ca7913bc980d8710741503ef1e2}{test\_\-alive} (char cell\_\-char)
+\begin{CompactList}\small\item\em Test if a cell is alive. \item\end{CompactList}\item 
+int \hyperlink{naive__conway_8h_909fef0c2e6115ff27374693e948577c}{compte\_\-alive} (\hyperlink{structUniverse}{Uni} last\_\-universe, int line, int column)
+\begin{CompactList}\small\item\em Compte the number of cells alive around a given cell \mbox{[}outside-dead implementation\mbox{]}. \item\end{CompactList}\item 
+int \hyperlink{naive__conway_8h_89221886d7f20f510ddcbf0cbd8ce7b1}{compte\_\-alive\_\-torus} (\hyperlink{structUniverse}{Uni} last\_\-universe, int line, int column)
+\begin{CompactList}\small\item\em Compte the number of cells alive around a given cell \mbox{[}torus implementation\mbox{]}. \item\end{CompactList}\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+Fonctions about the simulation of the conways rules applied on the universe structure. 
+
+\begin{Desc}
+\item[Author:]Julien Delavande\end{Desc}
+This are fonctions about the simulation of the conway game of of life applied on a universe structure. They are two different implementations, on considering the universe is a torus \mbox{[}torus implementation\mbox{]}. They can be recognize with \_\-torus word. The other implementation considers that the cell outside of the universe are dead and can't born \mbox{[}outside-dead implementation\mbox{]}. The implementation wich will be used in further files is the torus one.
+
+The API of the \hyperlink{naive__conway_8h}{naive\_\-conway.h} is defined as follows:
+
+\begin{itemize}
+\item a function that apply the Conway's rules once on a given universe \mbox{[}outside-dead implementation\mbox{]}\item a function that apply the Conway's rules the number of steps of the universe \mbox{[}outside-dead implementation\mbox{]}\item a function that apply the Conway's rules once on a given universe \mbox{[}torus implementation\mbox{]}\item a function that apply the Conway's rules the number of steps of the universe \mbox{[}torus implementation\mbox{]}\item a function to test if a cell is alive\item a function to compte the number of cells alive around a given cell \mbox{[}outside-dead implementation\mbox{]}\item a function to compte the number of cells alive around a given cell \mbox{[}torus implementation\mbox{]} \end{itemize}
+
+
+\subsection{Function Documentation}
+\hypertarget{naive__conway_8h_909fef0c2e6115ff27374693e948577c}{
+\index{naive\_\-conway.h@{naive\_\-conway.h}!compte\_\-alive@{compte\_\-alive}}
+\index{compte\_\-alive@{compte\_\-alive}!naive_conway.h@{naive\_\-conway.h}}
+\subsubsection[{compte\_\-alive}]{\setlength{\rightskip}{0pt plus 5cm}int compte\_\-alive ({\bf Uni} {\em last\_\-universe}, \/  int {\em line}, \/  int {\em column})}}
+\label{naive__conway_8h_909fef0c2e6115ff27374693e948577c}
+
+
+Compte the number of cells alive around a given cell \mbox{[}outside-dead implementation\mbox{]}. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em last\_\-universe}]a copy of the last universe \item[{\em line}]the line of the cell to compte the number of alive neighbors \item[{\em column}]the column of the cell to compte the number of alive neighbors\end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]the number of alive cell around the given cell \end{Desc}
+\hypertarget{naive__conway_8h_89221886d7f20f510ddcbf0cbd8ce7b1}{
+\index{naive\_\-conway.h@{naive\_\-conway.h}!compte\_\-alive\_\-torus@{compte\_\-alive\_\-torus}}
+\index{compte\_\-alive\_\-torus@{compte\_\-alive\_\-torus}!naive_conway.h@{naive\_\-conway.h}}
+\subsubsection[{compte\_\-alive\_\-torus}]{\setlength{\rightskip}{0pt plus 5cm}int compte\_\-alive\_\-torus ({\bf Uni} {\em last\_\-universe}, \/  int {\em line}, \/  int {\em column})}}
+\label{naive__conway_8h_89221886d7f20f510ddcbf0cbd8ce7b1}
+
+
+Compte the number of cells alive around a given cell \mbox{[}torus implementation\mbox{]}. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em last\_\-universe}]a copy of the last universe \item[{\em line}]the line of the cell to compte the number of alive neighbors \item[{\em column}]the column of the cell to compte the number of alive neighbors\end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]the number of alive cell around the given cell \end{Desc}
+\hypertarget{naive__conway_8h_cb5e111b115607f83e9af88f558921f2}{
+\index{naive\_\-conway.h@{naive\_\-conway.h}!naive\_\-simulation@{naive\_\-simulation}}
+\index{naive\_\-simulation@{naive\_\-simulation}!naive_conway.h@{naive\_\-conway.h}}
+\subsubsection[{naive\_\-simulation}]{\setlength{\rightskip}{0pt plus 5cm}void naive\_\-simulation ({\bf Uni} $\ast$ {\em p\_\-universe}, \/  bool {\em print\_\-term}, \/  bool {\em print\_\-ppm})}}
+\label{naive__conway_8h_cb5e111b115607f83e9af88f558921f2}
+
+
+Apply the Conway's rules the number of steps of the universe on a given universe \mbox{[}outside-dead implementation\mbox{]}. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em p\_\-universe}]a pointer to the universe \item[{\em print\_\-term}]a boolean true if you want to display the universe at all steps in the terminal \item[{\em print\_\-ppm}]a boolean true if you want to create ppm files at all steps in the out directory\end{description}
+\end{Desc}
+\begin{Desc}
+\item[Postcondition:]the universe is modified : the number of step of Conway's have been done \end{Desc}
+\hypertarget{naive__conway_8h_8807c3fa28f43d927ac57da8e2b4b4ed}{
+\index{naive\_\-conway.h@{naive\_\-conway.h}!naive\_\-simulation\_\-torus@{naive\_\-simulation\_\-torus}}
+\index{naive\_\-simulation\_\-torus@{naive\_\-simulation\_\-torus}!naive_conway.h@{naive\_\-conway.h}}
+\subsubsection[{naive\_\-simulation\_\-torus}]{\setlength{\rightskip}{0pt plus 5cm}void naive\_\-simulation\_\-torus ({\bf Uni} $\ast$ {\em p\_\-universe}, \/  bool {\em print\_\-term}, \/  bool {\em print\_\-ppm})}}
+\label{naive__conway_8h_8807c3fa28f43d927ac57da8e2b4b4ed}
+
+
+Apply the Conway's rules the number of steps of the universe on a given universe \mbox{[}torus implementation\mbox{]}. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em p\_\-universe}]a pointer to the universe \item[{\em print\_\-term}]a boolean true if you want to display the universe at all steps in the terminal \item[{\em print\_\-ppm}]a boolean true if you want to create ppm files at all steps in the out directory\end{description}
+\end{Desc}
+\begin{Desc}
+\item[Postcondition:]the universe is modified : the number of step of Conway's have been done \end{Desc}
+\hypertarget{naive__conway_8h_8c5808ad22ca29945c65e1989793831e}{
+\index{naive\_\-conway.h@{naive\_\-conway.h}!naive\_\-step@{naive\_\-step}}
+\index{naive\_\-step@{naive\_\-step}!naive_conway.h@{naive\_\-conway.h}}
+\subsubsection[{naive\_\-step}]{\setlength{\rightskip}{0pt plus 5cm}void naive\_\-step ({\bf Uni} $\ast$ {\em p\_\-universe})}}
+\label{naive__conway_8h_8c5808ad22ca29945c65e1989793831e}
+
+
+Apply the Conway's rules once on a given universe \mbox{[}outside-dead implementation\mbox{]}. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em p\_\-universe}]a pointer to the universe\end{description}
+\end{Desc}
+\begin{Desc}
+\item[Postcondition:]the universe is modified : one step of Conway's is done \end{Desc}
+\hypertarget{naive__conway_8h_471ecb109ad5f3460be53c2ae2da9000}{
+\index{naive\_\-conway.h@{naive\_\-conway.h}!naive\_\-step\_\-torus@{naive\_\-step\_\-torus}}
+\index{naive\_\-step\_\-torus@{naive\_\-step\_\-torus}!naive_conway.h@{naive\_\-conway.h}}
+\subsubsection[{naive\_\-step\_\-torus}]{\setlength{\rightskip}{0pt plus 5cm}void naive\_\-step\_\-torus ({\bf Uni} $\ast$ {\em p\_\-universe})}}
+\label{naive__conway_8h_471ecb109ad5f3460be53c2ae2da9000}
+
+
+Apply the Conway's rules once on a given universe \mbox{[}torus implementation\mbox{]}. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em p\_\-universe}]a pointer to the universe\end{description}
+\end{Desc}
+\begin{Desc}
+\item[Postcondition:]the universe is modified : one step of Conway's is done \end{Desc}
+\hypertarget{naive__conway_8h_944e6ca7913bc980d8710741503ef1e2}{
+\index{naive\_\-conway.h@{naive\_\-conway.h}!test\_\-alive@{test\_\-alive}}
+\index{test\_\-alive@{test\_\-alive}!naive_conway.h@{naive\_\-conway.h}}
+\subsubsection[{test\_\-alive}]{\setlength{\rightskip}{0pt plus 5cm}bool test\_\-alive (char {\em cell\_\-char})}}
+\label{naive__conway_8h_944e6ca7913bc980d8710741503ef1e2}
+
+
+Test if a cell is alive. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em cell\_\-char}]a character wich define the state of a cell\end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]true if the cell is alive and false if not \end{Desc}

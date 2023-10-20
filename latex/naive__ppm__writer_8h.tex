@@ -1,0 +1,53 @@
+\hypertarget{naive__ppm__writer_8h}{
+\section{include/naive\_\-ppm\_\-writer.h File Reference}
+\label{naive__ppm__writer_8h}\index{include/naive\_\-ppm\_\-writer.h@{include/naive\_\-ppm\_\-writer.h}}
+}
+Fonction to generate image.  
+
+
+{\tt \#include $<$stdio.h$>$}\par
+{\tt \#include $<$stdlib.h$>$}\par
+{\tt \#include $<$stdbool.h$>$}\par
+{\tt \#include \char`\"{}../include/naive\_\-universe.h\char`\"{}}\par
+{\tt \#include \char`\"{}../include/naive\_\-load.h\char`\"{}}\par
+
+
+Include dependency graph for naive\_\-ppm\_\-writer.h:
+
+This graph shows which files directly or indirectly include this file:\subsection*{Functions}
+\begin{CompactItemize}
+\item 
+void \hyperlink{naive__ppm__writer_8h_93f72f87888c17e45d1a4bfd2f2e4528}{naive\_\-generate\_\-image} (\hyperlink{structUniverse}{Uni} universe, int num)
+\begin{CompactList}\small\item\em Generate a ppm image from a given universe. \item\end{CompactList}\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+Fonction to generate image. 
+
+\begin{Desc}
+\item[Author:]Julien Delavande\end{Desc}
+This is a fonction to generate a ppm image from a given universe.
+
+The API of the \hyperlink{naive__load_8h}{naive\_\-load.h} is defined as follows:
+
+\begin{itemize}
+\item a function to generate a ppm image from a given universe \end{itemize}
+
+
+\subsection{Function Documentation}
+\hypertarget{naive__ppm__writer_8h_93f72f87888c17e45d1a4bfd2f2e4528}{
+\index{naive\_\-ppm\_\-writer.h@{naive\_\-ppm\_\-writer.h}!naive\_\-generate\_\-image@{naive\_\-generate\_\-image}}
+\index{naive\_\-generate\_\-image@{naive\_\-generate\_\-image}!naive_ppm_writer.h@{naive\_\-ppm\_\-writer.h}}
+\subsubsection[{naive\_\-generate\_\-image}]{\setlength{\rightskip}{0pt plus 5cm}void naive\_\-generate\_\-image ({\bf Uni} {\em universe}, \/  int {\em num})}}
+\label{naive__ppm__writer_8h_93f72f87888c17e45d1a4bfd2f2e4528}
+
+
+Generate a ppm image from a given universe. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em universe}]the universe to generate an image from \item[{\em num}]the number of the file for the universe to be put in\end{description}
+\end{Desc}
+\begin{Desc}
+\item[Postcondition:]create a img-num.ppm file in the out directory filed with a pictured version of the given universe \end{Desc}

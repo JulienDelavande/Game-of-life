@@ -1,0 +1,69 @@
+\hypertarget{naive__load_8h}{
+\section{include/naive\_\-load.h File Reference}
+\label{naive__load_8h}\index{include/naive\_\-load.h@{include/naive\_\-load.h}}
+}
+Fonctions that load a universe from a txt and print a given universe in a txt file.  
+
+
+{\tt \#include $<$stdio.h$>$}\par
+{\tt \#include $<$stdlib.h$>$}\par
+{\tt \#include \char`\"{}naive\_\-universe.h\char`\"{}}\par
+
+
+Include dependency graph for naive\_\-load.h:
+
+This graph shows which files directly or indirectly include this file:\subsection*{Functions}
+\begin{CompactItemize}
+\item 
+void \hyperlink{naive__load_8h_e762b3b6737bc7174168282afed77171}{print\_\-universe\_\-txt} (\hyperlink{structUniverse}{Uni} universe, char $\ast$string\_\-file)
+\begin{CompactList}\small\item\em Print the universe in a given file. \item\end{CompactList}\item 
+void \hyperlink{naive__load_8h_2291d2957faed5835c4f95c8edcc6307}{load\_\-universe\_\-txt} (\hyperlink{structUniverse}{Uni} $\ast$p\_\-universe, char $\ast$string\_\-file)
+\begin{CompactList}\small\item\em Load the universe from a given txt file. \item\end{CompactList}\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+Fonctions that load a universe from a txt and print a given universe in a txt file. 
+
+\begin{Desc}
+\item[Author:]Julien Delavande\end{Desc}
+This are fonction to load a universe from a txt file or to print a given universe in a txt file.
+
+The API of the \hyperlink{naive__load_8h}{naive\_\-load.h} is defined as follows:
+
+\begin{itemize}
+\item a function to print the universe in a given file\item a function to load the universe from a given txt file \end{itemize}
+
+
+\subsection{Function Documentation}
+\hypertarget{naive__load_8h_2291d2957faed5835c4f95c8edcc6307}{
+\index{naive\_\-load.h@{naive\_\-load.h}!load\_\-universe\_\-txt@{load\_\-universe\_\-txt}}
+\index{load\_\-universe\_\-txt@{load\_\-universe\_\-txt}!naive_load.h@{naive\_\-load.h}}
+\subsubsection[{load\_\-universe\_\-txt}]{\setlength{\rightskip}{0pt plus 5cm}void load\_\-universe\_\-txt ({\bf Uni} $\ast$ {\em p\_\-universe}, \/  char $\ast$ {\em string\_\-file})}}
+\label{naive__load_8h_2291d2957faed5835c4f95c8edcc6307}
+
+
+Load the universe from a given txt file. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em p\_\-universe}]a pointer to the universe to modified with the txt version \item[{\em string\_\-file}]the path of the txt to load the universe of\end{description}
+\end{Desc}
+\begin{Desc}
+\item[Postcondition:]modified the given universe by implementing the one in txt given file \end{Desc}
+\hypertarget{naive__load_8h_e762b3b6737bc7174168282afed77171}{
+\index{naive\_\-load.h@{naive\_\-load.h}!print\_\-universe\_\-txt@{print\_\-universe\_\-txt}}
+\index{print\_\-universe\_\-txt@{print\_\-universe\_\-txt}!naive_load.h@{naive\_\-load.h}}
+\subsubsection[{print\_\-universe\_\-txt}]{\setlength{\rightskip}{0pt plus 5cm}void print\_\-universe\_\-txt ({\bf Uni} {\em universe}, \/  char $\ast$ {\em string\_\-file})}}
+\label{naive__load_8h_e762b3b6737bc7174168282afed77171}
+
+
+Print the universe in a given file. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em universe}]the universe to print in the txt file \item[{\em string\_\-file}]the path of the txt to print the universe in\end{description}
+\end{Desc}
+\begin{Desc}
+\item[Postcondition:]create or modified the txt given file and filed it with the given universe \end{Desc}

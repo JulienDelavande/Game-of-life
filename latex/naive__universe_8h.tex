@@ -1,0 +1,189 @@
+\hypertarget{naive__universe_8h}{
+\section{include/naive\_\-universe.h File Reference}
+\label{naive__universe_8h}\index{include/naive\_\-universe.h@{include/naive\_\-universe.h}}
+}
+Simple definition of the structure Uni with fonctions.  
+
+
+{\tt \#include $<$stdio.h$>$}\par
+{\tt \#include $<$stdlib.h$>$}\par
+
+
+Include dependency graph for naive\_\-universe.h:
+
+This graph shows which files directly or indirectly include this file:\subsection*{Classes}
+\begin{CompactItemize}
+\item 
+struct \hyperlink{structUniverse}{Universe}
+\begin{CompactList}\small\item\em The structure representing the universe. \item\end{CompactList}\end{CompactItemize}
+\subsection*{Typedefs}
+\begin{CompactItemize}
+\item 
+\hypertarget{naive__universe_8h_4383dd3372ed3b0e1ab92741ab610ebc}{
+typedef struct \hyperlink{structUniverse}{Universe} \hyperlink{naive__universe_8h_4383dd3372ed3b0e1ab92741ab610ebc}{Uni}}
+\label{naive__universe_8h_4383dd3372ed3b0e1ab92741ab610ebc}
+
+\begin{CompactList}\small\item\em An alias to the universe structure : Uni. \item\end{CompactList}\end{CompactItemize}
+\subsection*{Functions}
+\begin{CompactItemize}
+\item 
+char \hyperlink{naive__universe_8h_c668534696e77d5459a93a06200f62f8}{access} (\hyperlink{structUniverse}{Uni} universe, int ligne, int column)
+\begin{CompactList}\small\item\em Get the value of the universe's matrix. \item\end{CompactList}\item 
+void \hyperlink{naive__universe_8h_4aaa0cb3a938fd0260e967bd66be1a7a}{set\_\-universe\_\-null} (\hyperlink{structUniverse}{Uni} $\ast$p\_\-universe)
+\begin{CompactList}\small\item\em Set the universe matrix's cells dead. \item\end{CompactList}\item 
+void \hyperlink{naive__universe_8h_2d3dbfb0301184bec6a19d9da805650a}{aff\_\-uni} (\hyperlink{structUniverse}{Uni} universe)
+\begin{CompactList}\small\item\em Display the universe in the terminal. \item\end{CompactList}\item 
+void \hyperlink{naive__universe_8h_4db731d96650a1cce4699db4e09c44b4}{switch\_\-value} (\hyperlink{structUniverse}{Uni} $\ast$p\_\-universe, int ligne, int colomn)
+\begin{CompactList}\small\item\em Switch the value in its other state of a cells in the universe matrix. \item\end{CompactList}\item 
+void \hyperlink{naive__universe_8h_a094d9dedfc15ea5e6818e71fcd6229f}{set\_\-alive} (\hyperlink{structUniverse}{Uni} $\ast$p\_\-universe, int ligne, int colomn)
+\begin{CompactList}\small\item\em Set a cell's universe matrix alive. \item\end{CompactList}\item 
+void \hyperlink{naive__universe_8h_05fe8b85333e0797a94350b70a4c4a93}{set\_\-dead} (\hyperlink{structUniverse}{Uni} $\ast$p\_\-universe, int ligne, int colomn)
+\begin{CompactList}\small\item\em Set a cell's universe matrix dead. \item\end{CompactList}\item 
+\hyperlink{structUniverse}{Uni} \hyperlink{naive__universe_8h_59b77d802cdb2b1c2c61505bdbe25e87}{copy\_\-uni} (\hyperlink{structUniverse}{Uni} universe)
+\begin{CompactList}\small\item\em Create a copy of a given universe. \item\end{CompactList}\item 
+void \hyperlink{naive__universe_8h_c2408e89049016fdba270b003a21534b}{free\_\-uni} (\hyperlink{structUniverse}{Uni} universe)
+\begin{CompactList}\small\item\em Desalocate the universe matrix. \item\end{CompactList}\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+Simple definition of the structure Uni with fonctions. 
+
+\begin{Desc}
+\item[Author:]Julien Delavande\end{Desc}
+This is a definition of the structure Uni which represent a universe. It contains the size of the universe an a matrix filled with char to represent the universe.
+
+The API of the naive\_\-univer.h is defined as follows:
+
+\begin{itemize}
+\item a function to get the value of the universe's matrix\item a function to set the universe matrix's cells dead\item a function to display the universe in the terminal\item a function to switch the value in its other state of a cells in the universe matrix\item a function to set a cell's universe matrix alive\item a function to set a cell's universe matrix dead\item a function to create a copy of a given universe\item a fonction to desalocate the universe matrix \end{itemize}
+
+
+\subsection{Function Documentation}
+\hypertarget{naive__universe_8h_c668534696e77d5459a93a06200f62f8}{
+\index{naive\_\-universe.h@{naive\_\-universe.h}!access@{access}}
+\index{access@{access}!naive_universe.h@{naive\_\-universe.h}}
+\subsubsection[{access}]{\setlength{\rightskip}{0pt plus 5cm}char access ({\bf Uni} {\em universe}, \/  int {\em ligne}, \/  int {\em column})}}
+\label{naive__universe_8h_c668534696e77d5459a93a06200f62f8}
+
+
+Get the value of the universe's matrix. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em universe}]the universe \item[{\em ligne}]the ligne of the value you want to access \item[{\em column}]the column of the value you want to access\end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]the character of the given ligne and column of the universe matrix\end{Desc}
+\begin{Desc}
+\item[Precondition:]`ligne` and `column`should be comprised between 0 and universe.height-1 and universe.width-1 respectively \end{Desc}
+\hypertarget{naive__universe_8h_2d3dbfb0301184bec6a19d9da805650a}{
+\index{naive\_\-universe.h@{naive\_\-universe.h}!aff\_\-uni@{aff\_\-uni}}
+\index{aff\_\-uni@{aff\_\-uni}!naive_universe.h@{naive\_\-universe.h}}
+\subsubsection[{aff\_\-uni}]{\setlength{\rightskip}{0pt plus 5cm}void aff\_\-uni ({\bf Uni} {\em universe})}}
+\label{naive__universe_8h_2d3dbfb0301184bec6a19d9da805650a}
+
+
+Display the universe in the terminal. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em universe}]the universe to display \end{description}
+\end{Desc}
+\hypertarget{naive__universe_8h_59b77d802cdb2b1c2c61505bdbe25e87}{
+\index{naive\_\-universe.h@{naive\_\-universe.h}!copy\_\-uni@{copy\_\-uni}}
+\index{copy\_\-uni@{copy\_\-uni}!naive_universe.h@{naive\_\-universe.h}}
+\subsubsection[{copy\_\-uni}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Uni} copy\_\-uni ({\bf Uni} {\em universe})}}
+\label{naive__universe_8h_59b77d802cdb2b1c2c61505bdbe25e87}
+
+
+Create a copy of a given universe. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em universe}]the universe to copy\end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]a copy of the universe \end{Desc}
+\hypertarget{naive__universe_8h_c2408e89049016fdba270b003a21534b}{
+\index{naive\_\-universe.h@{naive\_\-universe.h}!free\_\-uni@{free\_\-uni}}
+\index{free\_\-uni@{free\_\-uni}!naive_universe.h@{naive\_\-universe.h}}
+\subsubsection[{free\_\-uni}]{\setlength{\rightskip}{0pt plus 5cm}void free\_\-uni ({\bf Uni} {\em universe})}}
+\label{naive__universe_8h_c2408e89049016fdba270b003a21534b}
+
+
+Desalocate the universe matrix. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em universe}]the universe to desalocate\end{description}
+\end{Desc}
+\begin{Desc}
+\item[Postcondition:]the universe matrix is desalocated \end{Desc}
+\hypertarget{naive__universe_8h_a094d9dedfc15ea5e6818e71fcd6229f}{
+\index{naive\_\-universe.h@{naive\_\-universe.h}!set\_\-alive@{set\_\-alive}}
+\index{set\_\-alive@{set\_\-alive}!naive_universe.h@{naive\_\-universe.h}}
+\subsubsection[{set\_\-alive}]{\setlength{\rightskip}{0pt plus 5cm}void set\_\-alive ({\bf Uni} $\ast$ {\em p\_\-universe}, \/  int {\em ligne}, \/  int {\em colomn})}}
+\label{naive__universe_8h_a094d9dedfc15ea5e6818e71fcd6229f}
+
+
+Set a cell's universe matrix alive. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em p\_\-universe}]a pointer toward the universe to be modified \item[{\em ligne}]the ligne of the value you want to modified \item[{\em column}]the column of the value you want to modified\end{description}
+\end{Desc}
+\begin{Desc}
+\item[Postcondition:]After the call to `aff\_\-uni`, the given cell of the universe matrix is set alive (the given cell contain the 'o' character) \end{Desc}
+\hypertarget{naive__universe_8h_05fe8b85333e0797a94350b70a4c4a93}{
+\index{naive\_\-universe.h@{naive\_\-universe.h}!set\_\-dead@{set\_\-dead}}
+\index{set\_\-dead@{set\_\-dead}!naive_universe.h@{naive\_\-universe.h}}
+\subsubsection[{set\_\-dead}]{\setlength{\rightskip}{0pt plus 5cm}void set\_\-dead ({\bf Uni} $\ast$ {\em p\_\-universe}, \/  int {\em ligne}, \/  int {\em colomn})}}
+\label{naive__universe_8h_05fe8b85333e0797a94350b70a4c4a93}
+
+
+Set a cell's universe matrix dead. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em p\_\-universe}]a pointer toward the universe to be modified \item[{\em ligne}]the ligne of the value you want to modified \item[{\em column}]the column of the value you want to modified\end{description}
+\end{Desc}
+\begin{Desc}
+\item[Postcondition:]After the call to `aff\_\-uni`, the given cell of the universe matrix is set dead (the given cell contain the '.' character) \end{Desc}
+\hypertarget{naive__universe_8h_4aaa0cb3a938fd0260e967bd66be1a7a}{
+\index{naive\_\-universe.h@{naive\_\-universe.h}!set\_\-universe\_\-null@{set\_\-universe\_\-null}}
+\index{set\_\-universe\_\-null@{set\_\-universe\_\-null}!naive_universe.h@{naive\_\-universe.h}}
+\subsubsection[{set\_\-universe\_\-null}]{\setlength{\rightskip}{0pt plus 5cm}void set\_\-universe\_\-null ({\bf Uni} $\ast$ {\em p\_\-universe})}}
+\label{naive__universe_8h_4aaa0cb3a938fd0260e967bd66be1a7a}
+
+
+Set the universe matrix's cells dead. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em p\_\-universe}]a pointer toward the universe to be modified\end{description}
+\end{Desc}
+\begin{Desc}
+\item[Postcondition:]After the call to `set\_\-universe\_\-null`, all cells of the universe matrix are set dead (contain the char '-') \end{Desc}
+\hypertarget{naive__universe_8h_4db731d96650a1cce4699db4e09c44b4}{
+\index{naive\_\-universe.h@{naive\_\-universe.h}!switch\_\-value@{switch\_\-value}}
+\index{switch\_\-value@{switch\_\-value}!naive_universe.h@{naive\_\-universe.h}}
+\subsubsection[{switch\_\-value}]{\setlength{\rightskip}{0pt plus 5cm}void switch\_\-value ({\bf Uni} $\ast$ {\em p\_\-universe}, \/  int {\em ligne}, \/  int {\em colomn})}}
+\label{naive__universe_8h_4db731d96650a1cce4699db4e09c44b4}
+
+
+Switch the value in its other state of a cells in the universe matrix. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em p\_\-universe}]a pointer toward the universe to be modified \item[{\em ligne}]the ligne of the value you want to modified \item[{\em column}]the column of the value you want to modified\end{description}
+\end{Desc}
+\begin{Desc}
+\item[Postcondition:]After the call to `aff\_\-uni`, the given cell of the universe matrix switch its value into the other state \end{Desc}
